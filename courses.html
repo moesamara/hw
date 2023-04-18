@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        height: 1000px;
+      }
+      ul > li {
+        display: inline-block;
+        align-items: center;
+      }
+
+      header {
+        display: flex;
+        background-color: gray;
+        color: white;
+        position: sticky;
+        top: 0;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        align-items: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      nav ul:hover li {
+        color: yellow;
+        font-size: larger;
+      }
+
+      nav ul li {
+        margin-left: 10px;
+      }
+      footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      footer h1 {
+        margin: 0;
+      }
+      footer div {
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      hr {
+        height: 10px;
+      }
+      .m2 {
+        animation: glow 0.00001s infinite;
+      }
+      @keyframes glow {
+        0% {
+          color: white;
+          text-shadow: none;
+        }
+        100% {
+          color: yellow;
+          text-shadow: 0 0 5px yellow;
+        }
+      }
+      table {
+        width: 70%;
+        height: 70%;
+        text-align: center;
+      }
+      main {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Elearning system</h1>
+      <nav>
+        <ul>
+          <li><a href="signup.html" target="_blank">Sign Up</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="m2">Thank you for singing up</h1>
+      <h3>you can select your course from the following table</h3>
+      <table border="1px solid black">
+        <thead>
+          <tr>
+            <th colspan="3">courses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>courses name</td>
+            <td>instructor</td>
+            <td>course link</a></td>
+          </tr>
+          <tr>
+            <td>math</td>
+            <td>tasneem</td>
+            <td>
+              link</a>
+            </td>
+          </tr>
+          <tr>
+            <td>science</td>
+            <td rowspan="2">sara</td>
+            <td>link</a></td>
+          </tr>
+          <tr>
+            <td>computer</td>
+
+            <td>link</a></td>
+          </tr>
+          <tr>
+            <td>English</td>
+            <td>Mohammed</td>
+            <td>link</td>
+          </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+    </main>
+    <footer>
+      <h1>&copy; to author</h1>
+      <br />
+      <div>
+        <a href="https://www.linkedin.com/" target="_blank"
+          ><i class="fab fa-linkedin-square"></i
+        ></a>
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a href="https://github.com/" target="_blank"
+          ><i class="fab fa-github-square"></i
+        ></a>
+        <a href="https://twitter.com/" target="_blank"
+          ><i class="fab fa-twitter-square"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>
