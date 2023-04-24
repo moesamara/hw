@@ -75,6 +75,15 @@
   </head>
   <hr style="background-image: url('hr-img\\(2\).png')"; margin: 20px 0; />
   <body>
+    <script>
+      function askForName() {
+        var name = prompt("Welcome! Please enter your name:");
+        if (name != null && name != "") {
+          document.getElementById("welcomeMessage").innerHTML =
+            "Welcome, " + name + "!";
+        }
+      }
+    </script>
     <header>
       <h1>Elearning system</h1>
       <nav>
@@ -87,6 +96,10 @@
     </header>
     <hr />
     <main>
+      <div id="welcomeMessage"></div>
+      <script>
+        window.onload = askForName;
+      </script>
       <div>
         <img
           style="display: block; margin: auto; width: 500px"

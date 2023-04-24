@@ -75,9 +75,50 @@
     }
   </style>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ELearning</title>
+    <script>
+      function takeQuiz() {
+        var quizOption = prompt(
+          "Do you want to take a short quiz? (Yes/No)"
+        ).toLowerCase();
+        if (quizOption === "yes") {
+          var q1 = prompt(
+            "Enter a number between 1 and 100 that is divisible by 3, 5, 10 and 15:"
+          );
+          var q2 = prompt(
+            "What element does 'O' represent on the periodic table?"
+          );
+          var q3 = prompt("What's the capital of Italy?");
+          var q4 = prompt("How many Continents are there?");
+
+          var score = 0.0;
+          if (q1 == 30) {
+            score += 1.0;
+          }
+          if (q2.toLowerCase() == "oxygen") {
+            score += 1.0;
+          }
+          if (q3.toLowerCase() == "rome") {
+            score += 1.0;
+          }
+          if (q4 == 7 || q4 == "7") {
+            score += 1.0;
+          } else if (Math.abs(q4 - 7) == 1) {
+            score += 0.5;
+          }
+
+          if (score >= 2.5) {
+            alert(
+              "Congratulations, you passed the quiz! Your score is: " + score
+            );
+          } else {
+            alert("Sorry, you failed the quiz. Your score is: " + score);
+          }
+        } else {
+          alert("Okay, you can proceed with the signup process.");
+        }
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -92,6 +133,8 @@
     </header>
     <hr />
     <main>
+      <button onclick="takeQuiz()">Click here to take the quiz</button><br />
+      <br />
       <form action="courses.html">
         <label for="first-name">First Name:</label>
         <input type="text" id="first-name" name="first_name" required /><br />
